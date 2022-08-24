@@ -1,0 +1,33 @@
+#button1 {
+    border-radius  :20px; 
+    background-color: aliceblue;
+    border-color:blue ;
+    color: blue;
+    padding: 20px;
+    width: 200px;
+    margin-left: 120px;
+    font-size: larger;
+
+}
+#button2{
+    border-radius: 50%; 
+    background-color: rgb(19, 124, 216);
+    border-color:blue ;
+    color: rgb(17, 17, 18);
+    padding: 20px;
+    margin-left: 120px;
+    margin-top: 20px;
+
+
+}
+#button3{
+    box-shadow: 10px 5px 5px black;
+    background-color: rgb(2, 48, 88);
+    border-color:blue ;
+    color: rgb(237, 237, 240);
+    padding: 20px;
+    margin-left: 120px;
+    margin-top: 20px;
+    
+
+}
