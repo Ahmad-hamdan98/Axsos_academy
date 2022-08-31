@@ -54,33 +54,33 @@ function temp1(){
 var degre=document.getElementById("op").value;
 if (degre =="fh"){
 
-   int1=Math.floor(1.8*int1+32)+"°";
+   int1=Math.floor(1.8*int1+32)+"°F";
    document.getElementById("rain1").innerText=int1;
 
-   int2=Math.floor(1.8*int2+32)+"°";
+   int2=Math.floor(1.8*int2+32)+"°F";
    document.getElementById("rain-l").innerText=int2;
 
 
-   int3=Math.floor(1.8*int3+32)+"°";
+   int3=Math.floor(1.8*int3+32)+"°F";
    document.getElementById("tom-h").innerText=int3;
 
 
-   int4=Math.floor(1.8*int4+32)+"°";
+   int4=Math.floor(1.8*int4+32)+"°F";
    document.getElementById("tom-l").innerText=int4;
 
 
-   int5=Math.floor(1.8*int5+32)+"°";
+   int5=Math.floor(1.8*int5+32)+"°F";
    document.getElementById("fri-h").innerText=int5;
 
 
-   int6=Math.floor(1.8*int6+32)+"°";
+   int6=Math.floor(1.8*int6+32)+"°F";
    document.getElementById("fri-l").innerText=int6;
 
 
-   int7=Math.floor(1.8*int7+32)+"°";
+   int7=Math.floor(1.8*int7+32)+"°F";
    document.getElementById("sat-h").innerText=int7;
 
-   int8=Math.floor(1.8*int8+32)+"°";
+   int8=Math.floor(1.8*int8+32)+"°F";
    document.getElementById("sat-l").innerText=int8;
 
 
