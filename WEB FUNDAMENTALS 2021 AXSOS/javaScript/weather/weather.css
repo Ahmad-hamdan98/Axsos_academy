@@ -1,0 +1,172 @@
+.nav{
+    background-color: rgb(160, 138, 242);
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+.cities{
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+    margin-top: 35px;
+    
+}
+.cities a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.nav h1{
+    color: antiquewhite;
+}
+.under{
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin-left: 367px;
+}
+.left{
+    display: flex;
+    margin-top: 30px;
+}
+#op{
+    margin-left: 10px;
+    height: 20px;
+    margin-top: 18px;
+}
+hr{
+    width: 700px;
+    margin-left: 367px;
+    margin-top: auto;
+    height: 2px;
+    background-color: black;
+}
+.weather{
+display: flex;
+justify-content: space-between;
+width: 700px;
+padding-left: 368px;
+}
+.today{
+    background-color:#eeeeee;
+    width: 170px;
+    text-align: center;
+}
+#img{
+    width: 120px;
+    height: 120px;
+    border-radius: 55%;
+}
+#numbers{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#rain-h{
+    color: red;
+}
+#rain-l{
+    color: blue;
+}
+/* ----------------------------------------------------------------------+++++++++++++++++++ */
+.tomorrow{
+    background-color:#eeeeee;
+    width: 170px;
+    text-align: center;
+}
+#img{
+    width: 120px;
+    height: 120px;
+    border-radius: 55%;
+}
+#numbers{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#tom-h{
+    color: red;
+}
+#tom-l{
+    color: blue;
+}
+/* ==------------------------------------------------------------------------------------------ */
+
+/* ----------------------------------------------------------------------+++++++++++++++++++ */
+.friday{
+    background-color:#eeeeee;
+    width: 170px;
+    text-align: center;
+}
+#img{
+    width: 120px;
+    height: 120px;
+    border-radius: 55%;
+}
+#numbers{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#fri-h{
+    color: red;
+}
+#fri-l{
+    color: blue;
+}
+/* ==------------------------------------------------------------------------------------------ */
+
+/* ----------------------------------------------------------------------+++++++++++++++++++ */
+.saturday{
+    background-color:#eeeeee;
+    width: 170px;
+    text-align: center;
+}
+#img{
+    width: 120px;
+    height: 120px;
+    border-radius: 55%;
+}
+#numbers{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#sat-h{
+    color: red;
+}
+#sat-l{
+    color: blue;
+}
+/* ==------------------------------------------------------------------------------------------ */
+.cookie{
+    position: fixed;
+    bottom: 50px;
+    left: 367px;
+    display: flex;
+    /* margin-top: 12px; */
+    justify-content: space-around;
+    width: 700px;
+    background-color: rgb(212, 200, 200);
+    height: 120px;
+    /* margin-left: 367px; */
+}
+
+#img1{
+    margin-top: 30px;
+}
+#p1{
+    width: 500px;
+    height: 130px;
+}
+.cookie p {
+    margin-top: 0px;
+}
+.cookie h4{
+    margin-bottom: 5px;
+}
+#but1{
+    margin-top: 60px;
+    background-color: rgb(14, 161, 235);
+    box-shadow: 2px 3px  black;
+}

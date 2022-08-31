@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="weather.css">
+    
+</head>
+<body>
+    <!-- nav______________________________________________________________________________________________________________________ -->
+    <div class="nav">
+        <h1>DojoWeather</h1>
+        <div class="cities">
+
+      
+        <a href="#" onclick="alert('loading weather report')">Burbank</a>
+        <a href="#" onclick="alert('loading weather report')">Chicago</a>
+        <a href="#" onclick="alert('loading weather report')">Dallas</a>
+    </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+    <!--under nav- _______________________________________________________________ -->
+    <div class="under">
+        <h1>San Jose</h1>
+        <div class="left">
+            <p>show temperture in</p>
+            <select name="temp" id="op" onchange="temp1()">
+                <option value="cl">*C</option>
+                <option value="fh">*F</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- --------------------------------------------------------------- -->
+    <hr>
+    <!-- ______________________________________________________________________________________________weather -->
+    <div class="weather">
+        <div class="today">
+            <h3>Today</h3>
+            <img id="img" src="some_rain.png" alt="wefcaed">
+            <p>some rain</p>
+            <div id="numbers">
+                <div class="high" id="rain-h">
+                    <p id="rain1">24 °</p>
+                </div>
+                <div class="low">
+                    <p id="rain-l">18</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+            <div class="tomorrow">
+                <h3>Tomorrow</h3>
+            <img id="img" src="some_sun.png" alt="wefcaed">
+            <p>some rain</p>
+            <div id="numbers">
+                <div class="high">
+                    <p id="tom-h">15</p>
+                </div>
+                <div class="low">
+                    <p id="tom-l">11</p>
+                </div>
+            </div>
+
+            </div>
+
+                <div class="friday">
+                <h3>Friday</h3>
+            <img id="img" src="some_clouds.png" alt="wefcaed">
+            <p>some rain</p>
+            <div id="numbers">
+                <div class="high">
+                    <p id="fri-h">21</p>
+                </div>
+                <div class="low">
+                    <p id="fri-l">28</p>
+                </div>
+            </div>
+
+                </div>
+                    <div class="saturday">
+                        <h3>Today</h3>
+                        <img id="img" src="some_sun.png" alt="wefcaed">
+                        <p>some rain</p>
+                        <div id="numbers">
+                            <div class="high">
+                                <p id="sat-h">45</p>
+                            </div>
+
+                            <div class="low">
+                                <p id="sat-l">23</p>
+                            </div>
+                        </div>
+                    </div>
+       
+    </div>
+    <div class="cookie" id="cookie1">
+        <div><img id="img1" src="cookie.png" alt="wsrefcwes"></div>
+        <div id="p1">
+            <h4>Stop! cookie time </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elitmaxime corrupti odit adipisicing elitmaxime a, repudiandae impedit ab fuga error dolores ducimus facilis in. Modi perferendis <a href="#">read more</a> </p>
+        </div>
+        <div>
+             <button id="but1" onclick="remove()">I Accept</button>
+            </div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>
