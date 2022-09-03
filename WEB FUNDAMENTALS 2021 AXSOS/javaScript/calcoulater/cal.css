@@ -1,0 +1,28 @@
+/* .row{
+    margin: 30px;
+    mar
+} */
+
+button{
+    border-radius: 49%;
+    
+    width: 80px;
+    height: 80px;
+}
+
+#calculator{
+    margin-left: 290px;
+    margin-top: 200px;
+}
+
+.operator{
+    border-radius: 49%;
+    background-color: rgb(221, 186, 30);
+}
+#equals{
+    width: 320px;
+    background-color: cornflowerblue;
+}
+#clr{
+    background-color: chartreuse;
+}
