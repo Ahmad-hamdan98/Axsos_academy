@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exam.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav"><h2> Free Phone GRIP On Select PUrchases</h2></div>
+    <div class="nav2">
+        <h1>PlushStart</h1>
+        <input id="search" type="search" placeholder="Search..."  >
+        <h3 id="bays">0</h3><img  id="cart" src="cart-dark.png" alt="cart-dark-img" >
+    </div>
+    <div class="nav3">
+        <div class="center">
+        <a href="#">Home</a>
+        <a href="#">New</a>
+        <a href="#" id="pro">Products <hr></a>
+        <a href="#">Sales</a>
+        <a href="#">Plog</a>
+        <p id="contactus" onclick="alert('contact us on 056-882-0807')"><a href="#"> contact Us</a></p>
+        </div>
+    </div>
+    <img id="screenshot" src="sc.png" alt="the easy way">
+
+    <div class="nav4">
+        <p id="sorted">62 Products , sorted py Price</p>
+        <div class="left">
+            <p>Sort By .</p>
+            <select name="sort" id="op" onchange="sort()">
+                <option value="Price">price </option>
+                <option value="Name">name </option>
+                <option value="Size">Size </option>
+            </select>
+        </div>
+    </div>
+
+    <div class="boxs"> 
+        <div class="box1">
+            <img src="product-image.png" alt="">
+            <h4>Mischif Mouse</h4>
+            <button  onclick="incres()">Bay</button>
+        </div>
+
+        <div class="box2">
+            <img src="product-image.png" alt="">
+            <h4>Shy Shrew</h4>
+            <button onclick="incres()">Bay</button>
+        </div>
+
+        <div class="box3">
+            <img src="product-image.png" alt="">
+            <h4>Hangry Hamster</h4>
+            <button  onclick="incres()">Bay</button>
+        </div>
+
+        <div class="box4">
+            <img src="product-image.png" alt="">
+            <h4>Chilly Chinchilla</h4>
+            <button  onclick="incres()">Bay</button>
+        </div>
+    </div>
+<script src="exam.js"></script>
+</body>
+</html>
