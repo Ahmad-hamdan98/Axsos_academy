@@ -1,0 +1,271 @@
+Microsoft Windows [Version 10.0.22000.856]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\HP\Documents\Axsos_academy\Python>cd "New folder"
+
+C:\Users\HP\Documents\Axsos_academy\Python\New folder>call py3Env\Scripts\activate
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip list
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+pip (9.0.1)
+setuptools (28.8.0)
+You are using pip version 9.0.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>deactivate
+C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip3 list
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+pip (9.0.1)
+setuptools (28.8.0)
+You are using pip version 9.0.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip list
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+pip (9.0.1)
+setuptools (28.8.0)
+You are using pip version 9.0.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+C:\Users\HP\Documents\Axsos_academy\Python\New folder>python -m pip install --upgrade pip
+Cache entry deserialization failed, entry ignored
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/a4/6d/6463d49a933f547439d6b5b98b46af8742cc03ae83543e4d7688c2420f8b/pip-21.3.1-py3-none-any.whl (1.7MB)
+    100% |████████████████████████████████| 1.7MB 346kB/s
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+      Successfully uninstalled pip-9.0.1
+Successfully installed pip-21.3.1
+You are using pip version 21.3.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip list
+Package    Version
+---------- -------
+pip        21.3.1
+setuptools 28.8.0
+
+C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip3 list
+Package    Version
+---------- -------
+pip        21.3.1
+setuptools 28.8.0
+
+C:\Users\HP\Documents\Axsos_academy\Python\New folder>call py3Env\Scripts\activate
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip install Flask
+Collecting Flask
+  Downloading https://files.pythonhosted.org/packages/cd/77/59df23681f4fd19b7cbbb5e92484d46ad587554f5d490f33ef907e456132/Flask-2.0.3-py3-none-any.whl (95kB)
+    100% |████████████████████████████████| 102kB 799kB/s
+Collecting Werkzeug>=2.0 (from Flask)
+  Downloading https://files.pythonhosted.org/packages/f4/f3/22afbdb20cc4654b10c98043414a14057cd27fdba9d4ae61cea596000ba2/Werkzeug-2.0.3-py3-none-any.whl (289kB)
+    100% |████████████████████████████████| 296kB 852kB/s
+Collecting Jinja2>=3.0 (from Flask)
+  Downloading https://files.pythonhosted.org/packages/20/9a/e5d9ec41927401e41aea8af6d16e78b5e612bca4699d417f646a9610a076/Jinja2-3.0.3-py3-none-any.whl (133kB)
+    100% |████████████████████████████████| 143kB 284kB/s
+Collecting itsdangerous>=2.0 (from Flask)
+  Downloading https://files.pythonhosted.org/packages/9c/96/26f935afba9cd6140216da5add223a0c465b99d0f112b68a4ca426441019/itsdangerous-2.0.1-py3-none-any.whl
+Collecting click>=7.1.2 (from Flask)
+  Downloading https://files.pythonhosted.org/packages/4a/a8/0b2ced25639fb20cc1c9784de90a8c25f9504a7f18cd8b5397bd61696d7d/click-8.0.4-py3-none-any.whl (97kB)
+    100% |████████████████████████████████| 102kB 673kB/s
+Collecting dataclasses; python_version < "3.7" (from Werkzeug>=2.0->Flask)
+  Downloading https://files.pythonhosted.org/packages/fe/ca/75fac5856ab5cfa51bbbcefa250182e50441074fdc3f803f6e76451fab43/dataclasses-0.8-py3-none-any.whl
+Collecting MarkupSafe>=2.0 (from Jinja2>=3.0->Flask)
+  Downloading https://files.pythonhosted.org/packages/f5/ff/9a35fc0f3fbda4cada0e559833b84627ddf44c45664741aed7da1b2468f2/MarkupSafe-2.0.1-cp36-cp36m-win32.whl
+Collecting importlib-metadata; python_version < "3.8" (from click>=7.1.2->Flask)
+  Downloading https://files.pythonhosted.org/packages/a0/a1/b153a0a4caf7a7e3f15c2cd56c7702e2cf3d89b1b359d1f1c5e59d68f4ce/importlib_metadata-4.8.3-py3-none-any.whl
+Collecting colorama; platform_system == "Windows" (from click>=7.1.2->Flask)
+  Downloading https://files.pythonhosted.org/packages/77/8b/7550e87b2d308a1b711725dfaddc19c695f8c5fa413c640b2be01662f4e6/colorama-0.4.5-py2.py3-none-any.whl
+Collecting typing-extensions>=3.6.4; python_version < "3.8" (from importlib-metadata; python_version < "3.8"->click>=7.1.2->Flask)
+  Downloading https://files.pythonhosted.org/packages/45/6b/44f7f8f1e110027cf88956b59f2fad776cca7e1704396d043f89effd3a0e/typing_extensions-4.1.1-py3-none-any.whl
+Collecting zipp>=0.5 (from importlib-metadata; python_version < "3.8"->click>=7.1.2->Flask)
+  Downloading https://files.pythonhosted.org/packages/bd/df/d4a4974a3e3957fd1c1fa3082366d7fff6e428ddb55f074bf64876f8e8ad/zipp-3.6.0-py3-none-any.whl
+Installing collected packages: dataclasses, Werkzeug, MarkupSafe, Jinja2, itsdangerous, typing-extensions, zipp, importlib-metadata, colorama, click, Flask
+Successfully installed Flask-2.0.3 Jinja2-3.0.3 MarkupSafe-2.0.1 Werkzeug-2.0.3 click-8.0.4 colorama-0.4.5 dataclasses-0.8 importlib-metadata-4.8.3 itsdangerous-2.0.1 typing-extensions-4.1.1 zipp-3.6.0
+You are using pip version 9.0.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip3 list
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+click (8.0.4)
+colorama (0.4.5)
+dataclasses (0.8)
+Flask (2.0.3)
+importlib-metadata (4.8.3)
+itsdangerous (2.0.1)
+Jinja2 (3.0.3)
+MarkupSafe (2.0.1)
+pip (9.0.1)
+setuptools (28.8.0)
+typing-extensions (4.1.1)
+Werkzeug (2.0.3)
+zipp (3.6.0)
+You are using pip version 9.0.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>deactivate
+C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip3 list
+Package    Version
+---------- -------
+pip        21.3.1
+setuptools 28.8.0
+
+C:\Users\HP\Documents\Axsos_academy\Python\New folder>call py3Env\Scripts\activate
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip uninstall Flask
+Uninstalling Flask-2.0.3:
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask-2.0.3.dist-info\entry_points.txt
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask-2.0.3.dist-info\installer
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask-2.0.3.dist-info\license.rst
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask-2.0.3.dist-info\metadata
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask-2.0.3.dist-info\record
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask-2.0.3.dist-info\top_level.txt
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask-2.0.3.dist-info\wheel
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__init__.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__main__.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\__init__.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\__main__.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\app.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\blueprints.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\cli.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\config.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\ctx.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\debughelpers.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\globals.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\helpers.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\logging.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\scaffold.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\sessions.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\signals.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\templating.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\testing.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\typing.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\views.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\__pycache__\wrappers.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\app.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\blueprints.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\cli.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\config.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\ctx.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\debughelpers.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\globals.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\helpers.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\json\__init__.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\json\__pycache__\__init__.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\json\__pycache__\tag.cpython-36.pyc
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\json\tag.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\logging.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\py.typed
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\scaffold.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\sessions.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\signals.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\templating.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\testing.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\typing.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\views.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\flask\wrappers.py
+  c:\users\hp\documents\axsos_academy\python\new folder\py3env\scripts\flask.exe
+Proceed (y/n)? y
+  Successfully uninstalled Flask-2.0.3
+You are using pip version 9.0.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip3 list
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+click (8.0.4)
+colorama (0.4.5)
+dataclasses (0.8)
+importlib-metadata (4.8.3)
+itsdangerous (2.0.1)
+Jinja2 (3.0.3)
+MarkupSafe (2.0.1)
+pip (9.0.1)
+setuptools (28.8.0)
+typing-extensions (4.1.1)
+Werkzeug (2.0.3)
+zipp (3.6.0)
+You are using pip version 9.0.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip uninstall Jinja2-3.0.3 MarkupSafe-2.0.1 Werkzeug-2.0.3 click-8.0.4 colorama-0.4.5 dataclasses-0.8 importlib-metadata-4.8.3 itsdangerous-2.0.1 typing-extensions-4.1.1 zipp-3.6.0
+Cannot uninstall requirement Jinja2-3.0.3, not installed
+You are using pip version 9.0.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip install Django==2.2.4
+Collecting Django==2.2.4
+  Downloading https://files.pythonhosted.org/packages/d6/57/66997ca6ef17d2d0f0ebcd860bc6778095ffee04077ca8985928175da358/Django-2.2.4-py3-none-any.whl (7.5MB)
+    100% |████████████████████████████████| 7.5MB 100kB/s
+Collecting sqlparse (from Django==2.2.4)
+  Downloading https://files.pythonhosted.org/packages/05/40/d836d55fb3f467243ee839ab7b814822fda522cd395fa41e282684e71ee5/sqlparse-0.4.2-py3-none-any.whl (42kB)
+    100% |████████████████████████████████| 51kB 210kB/s
+Collecting pytz (from Django==2.2.4)
+  Downloading https://files.pythonhosted.org/packages/d5/50/54451e88e3da4616286029a3a17fc377de817f66a0f50e1faaee90161724/pytz-2022.2.1-py2.py3-none-any.whl (500kB)
+    100% |████████████████████████████████| 501kB 788kB/s
+Installing collected packages: sqlparse, pytz, Django
+Successfully installed Django-2.2.4 pytz-2022.2.1 sqlparse-0.4.2
+You are using pip version 9.0.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip freeze
+click==8.0.4
+colorama==0.4.5
+dataclasses==0.8
+Django==2.2.4
+importlib-metadata==4.8.3
+itsdangerous==2.0.1
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+pytz==2022.2.1
+sqlparse==0.4.2
+typing-extensions==4.1.1
+Werkzeug==2.0.3
+zipp==3.6.0
+You are using pip version 9.0.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>cd ~/Desktop
+The system cannot find the path specified.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip freeze>requirment.text
+You are using pip version 9.0.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>python -m pip install --upgrade pip
+Cache entry deserialization failed, entry ignored
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/a4/6d/6463d49a933f547439d6b5b98b46af8742cc03ae83543e4d7688c2420f8b/pip-21.3.1-py3-none-any.whl
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+      Successfully uninstalled pip-9.0.1
+Successfully installed pip-21.3.1
+You are using pip version 21.3.1, however version 22.2.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip freeze>requirment.text
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>ls C:\Users\HP\Documents\Axsos_academy\Python\New folder
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip uninstall Django
+Found existing installation: Django 2.2.4
+Uninstalling Django-2.2.4:
+  Would remove:
+    c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\django-2.2.4.dist-info\*
+    c:\users\hp\documents\axsos_academy\python\new folder\py3env\lib\site-packages\django\*
+    c:\users\hp\documents\axsos_academy\python\new folder\py3env\scripts\django-admin.exe
+    c:\users\hp\documents\axsos_academy\python\new folder\py3env\scripts\django-admin.py
+Proceed (Y/n)? y
+  Successfully uninstalled Django-2.2.4
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>pip show Django
+WARNING: Package(s) not found: Django
+
+(py3Env) C:\Users\HP\Documents\Axsos_academy\Python\New folder>
