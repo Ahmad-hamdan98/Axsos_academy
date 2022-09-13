@@ -14,7 +14,7 @@ class BankAccount:
     def withdraw(self, amount):
         if  self.balance-amount>0:
             self.balance -= amount
-        else:
+        elif self.balance>5:
             print("Insufficient funds: Charging a $5 fee")
             self.balance-=5
         return self
@@ -25,7 +25,7 @@ class BankAccount:
 
     def yield_interest(self):
         
-        if  self.balance <= 0:
+        if  self.balance >= 1:
             self.balance+=self.balance*self.int_rat
             return self
 
@@ -34,6 +34,6 @@ account1=BankAccount(0.05,0)
 account2=BankAccount(0.04,200)
 
 
-account1.deposit(20).deposit(10).deposit(20).withdraw(100).display_account_info()
-account2.deposit(30).deposit(40).withdraw(10).withdraw(20).withdraw(15).withdraw(15).display_account_info()
+account1.deposit(20).deposit(10).deposit(20).withdraw(100).yield_interest().display_account_info()
+account2.deposit(30).deposit(40).withdraw(10).withdraw(20).withdraw(15).withdraw(15).yield_interest().display_account_info()
 
