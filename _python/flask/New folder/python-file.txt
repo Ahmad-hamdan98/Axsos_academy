@@ -1,0 +1,15 @@
+from flask import Flask, render_template  # added render_template!
+
+app = Flask(__name__)                     
+
+
+
+@app.route("/<val1>/<val2>/<col1>/<col2>")                           
+def hello_world(val1,val2,col1,col2):
+    # Instead of returning a string, 
+    # we'll return the result of the render_template method, passing in the name of our HTML file
+    return render_template('index.html',color1=col1,color2=col2,value1=int(val1),value2=int(val2))  
+    
+if __name__=="__main__":
+    app.run(debug=True)                   
+
