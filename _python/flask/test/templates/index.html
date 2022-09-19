@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+<h3>Create a User</h3>
+    <form action='/users' method='post'>
+    Name: <input type='text' name='name'><br><br>
+    location: 
+        <select name="locations" id="loc">
+
+            <option value="palestine">palestine</option>
+            <option value="areha">areha</option>
+            <option value="pangladesh">pangladesh</option>
+
+        </select><br><br>
+        favrite Language: 
+        <select name="language" id="loc">
+
+            <option value="java">java</option>
+            <option value="python">python</option>
+            <option value="zeft">zeft</option>
+
+        </select><br><br>
+
+
+    Write about your self:    <textarea name="text" rows="3" cols="20" ></textarea><br><br>
+    <input type='submit' value='create user'>
+
+</form>
+
+
+</body>
+</html>
