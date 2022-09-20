@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .dis{
+        background-color: rgb(222, 209, 209);
+        width: 450px;
+        margin-top: 100px;
+        margin-left: 200px;
+        height: 110px;
+        padding: 40px;
+    }
+    button{
+        margin-left: 420px;
+    }
+    </style>
+</head>
+<body>
+    <div class="dis">
+    <form action="result/" method="post">
+        {% csrf_token %}
+   inter your name: <input type="text" name="tetxname"><br><br>
+   Dojo Location: 
+   <select name="loc" >
+        <option value="sanloys">sanloys</option>
+        <option value="Dora">Dora</option>
+
+   </select><br><br>
+   Faverit Language:
+   <select name="fav" >
+    <option value="python">python</option>
+    <option value="java">java</option>
+
+</select><br><br>
+    <button type="submit" >submit</button>
+</form>
+</div>
+</body>
+</html>
