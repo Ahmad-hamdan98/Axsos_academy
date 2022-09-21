@@ -8,39 +8,56 @@
 
     <style>
         .con{
-            width: 300px;
+            width: 400px;
             height: 400px;
-            margin-left: 400px;
+            margin-left: 300px;
             margin-top: 100px;
+            align-items: center;
         }
         .low{
             background-color: red;
             width: 175px;
-            height: 40px;
+            height: 70px;
+            margin-left: 120px;
+            align-items: center;
             text-align: center;
         }
         .high{
             background-color:red;
             width: 175px;
-            height: 40px;
+            height: 70px;
+            margin-left:  120px;
             text-align: center;
         }
         .win{
             background-color:green;
             width: 175px;
-            height: 40px;
+            height: 70px;
+            margin-left:  120px;
             text-align: center;
         }
-
+        p{
+            text-align: center;
+            
+        }
+        input{
+            margin-left:  120px;
+            align-items: center;
+        }
+        button{
+            margin-left:  180px;
+        }
     </style>    
 
 </head>
 <body>
+
     <form action="/show" method="post">
         {% csrf_token %}
 
         {{request.session.rand}}
         <div class="con">
+            <h1>Welcome to the Ninja Game</h1>
             {% if request.session.result == "low" %}
             <div class="low">Too low</div>
         {%elif request.session.result == "high"%}
@@ -48,8 +65,8 @@
         {%elif request.session.result == "correct_number"  %}
             <div class="win">Correct Number</div>
         {%endif%}
-        inter your number: <br>
-        <input type="number" value=" " name="num"><br>
+        <p> inter your number:</p> <br>
+        <input type="number" value=" " name="num"><br><br>
 
        
         <button type="submit" >Check</button>

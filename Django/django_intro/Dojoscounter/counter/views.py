@@ -9,6 +9,7 @@ import random
 def rand(request):
     rand2 = random.randint(1, 100)
     request.session['rand'] = rand2
+    request.session['result']=''
     return render(request,"index.html")
 
 
@@ -20,8 +21,10 @@ def show(request):
         request.session['result']="low"
     elif request.session['namb']==request.session['rand']:
         request.session['result']="correct_number"
-    else:
-        return  redirect('/')   
-    return redirect('/')
+    
+    
+    return redirect('/res')
 
    
+def res(request):
+    return render(request,"index.html")
