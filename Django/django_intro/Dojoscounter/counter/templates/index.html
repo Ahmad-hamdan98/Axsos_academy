@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .con{
+            width: 300px;
+            height: 400px;
+            margin-left: 400px;
+            margin-top: 100px;
+        }
+        .low{
+            background-color: red;
+            width: 175px;
+            height: 40px;
+            text-align: center;
+        }
+        .high{
+            background-color:red;
+            width: 175px;
+            height: 40px;
+            text-align: center;
+        }
+        .win{
+            background-color:green;
+            width: 175px;
+            height: 40px;
+            text-align: center;
+        }
+
+    </style>    
+
+</head>
+<body>
+    <form action="/show" method="post">
+        {% csrf_token %}
+
+        {{request.session.rand}}
+        <div class="con">
+            {% if request.session.result == "low" %}
+            <div class="low">Too low</div>
+        {%elif request.session.result == "high"%}
+            <div class="high">toooooooo high</div>
+        {%elif request.session.result == "correct_number"  %}
+            <div class="win">Correct Number</div>
+        {%endif%}
+        inter your number: <br>
+        <input type="number" value=" " name="num"><br>
+
+       
+        <button type="submit" >Check</button>
+        </div>
+
+        
+    </form>
+    
+   
+
+
+    
+
+
+    
+</body>
+</html>
