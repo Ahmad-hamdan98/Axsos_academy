@@ -1,26 +1,28 @@
+import email
 from urllib import request
 from django.shortcuts import render , redirect
+
+from . models import User
 
 # Create your views here.
 
 
-
-
 def show(request):
-    return render(request,'index.html')
+    context={
+        "all_the_users": User.objects.all()
+    }
+    return render(request,'index.html',context)
 
 
 def result(request):
-    context={
-        'name':request.POST["tetxname"],
-        'location':request.POST["loc"],
-        'favert':request.POST["fav"],
-    }
-    return render(request,'output.html',context)
+    
+    User.objects.create( first_name=request.POST["firstname"],last_name=request.POST["lastname"],email=request.POST["email"],age=request.POST["age"])
+    return redirect('/')
 
 
 def result1(request):
-    return render(request,'output.html')
+    return render(request,'index.html')
 
 
 
+ 

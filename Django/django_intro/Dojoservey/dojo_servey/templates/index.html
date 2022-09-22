@@ -5,39 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    
     <style>
+   .contaner{
+        width: 800px;
+        margin:0 400px;
+        margin-top: 20px;
+        border: 2px solid black;
+   }
     .dis{
         background-color: rgb(222, 209, 209);
-        width: 450px;
-        margin-top: 100px;
-        margin-left: 200px;
-        height: 110px;
+        width: auto;
+        height: auto;
+        display: flex;
         padding: 40px;
     }
-    button{
-        margin-left: 420px;
+    table{
+        text-align: center;
+        margin-top: -130px;
     }
+    input{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    h2{
+        text-align: center;
+    }
+    
     </style>
 </head>
+
 <body>
+   
+<div class="contaner">
+    <h2>All the Users</h2> 
+    <table border = 1  class="table table-striped">
+        
+        <th>Id</th>
+        <th>Firs aNme</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        
+    {%for i in all_the_users %}
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.first_name}}</td>
+        <td>{{i.last_name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.age}}</td>
+      </tr>
+      <br>
+    {%endfor%}
+
+</table>
+<hr>
+<form action="result/" method="post">
+    {% csrf_token %}
+    <h2>Add Users</h2>
     <div class="dis">
-    <form action="result/" method="post">
-        {% csrf_token %}
-   inter your name: <input type="text" name="tetxname"><br><br>
-   Dojo Location: 
-   <select name="loc" >
-        <option value="sanloys">sanloys</option>
-        <option value="Dora">Dora</option>
+       
+    
+    <div class="con">
 
-   </select><br><br>
-   Faverit Language:
-   <select name="fav" >
-    <option value="python">python</option>
-    <option value="java">java</option>
-
-</select><br><br>
-    <button type="submit" >submit</button>
-</form>
+   First Name: <input type="text" name="firstname"><br><br>
+   LAst Name: <input type="text" name="lastname"><br><br>
 </div>
+<div class="diss">
+   Email: <input type="text" name="email"><br><br>
+   Age:<input type="number" name="age"><br><br>
+   <button type="submit" >Add</button>
+</div>
+  
+    
+</form>
+
+</div>
+
+
 </body>
 </html>
