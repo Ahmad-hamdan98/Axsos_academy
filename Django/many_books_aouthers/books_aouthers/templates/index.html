@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenar{
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #text{
+            height: 100px;
+        }
+        table{
+            width: 400px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenar">
+        <div class="box1">
+
+            <h1>Add a Book</h1>
+             <form action="/book" method="post">
+                {% csrf_token %}
+                Title: <input type="text" name="title"><br><br>
+                Description: <input type="text" name="desc" id="text"><br><br>
+                <button type="submit" name="addbook">Add</button><br><br>
+                
+            </form>
+            <form action="/aouther" method="post">
+                {% csrf_token %}
+                
+                
+                <button type="submit" name="GO">GO to aouthers page</button><br><br>
+                
+            </form>
+        </div> 
+
+
+
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Actions</td>
+        </tr>
+    {%for i in allthebooks%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.title}}</td>
+        <td><a href="/views/{{i.id}}">Viwes</a></td>
+        
+    </tr>
+    {%endfor%}
+</table>
+</div>
+</body>
+</html>

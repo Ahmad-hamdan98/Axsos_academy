@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .contenar{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 60px;
+        }
+        table{
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="contenar">
+        <div class="box1">
+
+            <h1>Add an Aouther</h1>
+             <form action="/auth" method="post">
+                {% csrf_token %}
+                First Name: <input type="text" name="first_name"><br><br>
+                Last Name: <input type="text" name="last_name" ><br><br>
+                Note: <input type="text" name="note" ><br><br>
+                <button type="submit" name="addbook">Add Aouther</button>
+            </form><br>
+
+            <form action="/" method="post">
+                {% csrf_token %}
+                
+                
+                <button type="submit" name="GO">Go to Books page</button><br><br>
+                
+            </form>
+        </div> 
+
+
+
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <label for="text"><td>Name</td></label> 
+            <td>Actions</td>
+        </tr>
+    {% for i in alltheaouthers %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.first_name}}</td>
+
+        <td><a href="/views2/{{i.id}}">Viwes</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+</body>
+</html>

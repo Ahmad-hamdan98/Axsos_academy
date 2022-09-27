@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+       padding: 100px;
+   }
+   </style>
+</head>
+<body>
+    <h1>{{showbook.title}}</h1>
+    <h1>ID  {{showbook.id}}</h1>
+    <h2>Description : {{showbook.desc}}</h2>
+
+    <br>
+    <ul>
+    <h1>Authors</h1>
+    {% for i in allbooks %}
+        <li>{{i.first_name}}</li>
+    {% endfor %}
+</ul>
+    <form action="/addauth" method="post">
+        {% csrf_token %}
+        <input type="hidden" value="{{showbook.id}}" name="ids">
+        <select name="select" id="select">
+        {% for i in  author%}
+        {% if i not in allbooks %}
+        <option value="{{i.id}}">{{i.first_name}}</option>
+        {% endif %}
+        {% endfor %}
+    </select>
+    <input type="submit" value="Ok">
+    </form><br><br>
+
+
+
+
+
+    <form action="/" method="post">
+        {% csrf_token %}
+        
+        
+        <button type="submit" name="GO">Back to Books page</button><br><br>
+        
+    </form>
+</body>
+</html>
