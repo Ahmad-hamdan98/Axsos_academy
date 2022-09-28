@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f{
+            margin-left: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TV SHOW : {{last_objec.id}}</h1>
+    <a class="f" href="/">Go Back</a>
+    <p>Title : {{last_objec.title}}</p>
+    <p>NETWORK : {{last_objec.show}}</p>
+    <p>Release Date : {{last_objec.date}}</p>
+    <p>Description : {{last_objec.desc}}</p><br><br><br><br>
+    <p>Last Update : {{last_objec.updated_at}}</p>
+
+
+    <a href="/goedit/{{last_objec.id}}">Edit</a>|<a href="/delet/{{last_objec.id}}">Delete</a>
+    
+</body>
+</html>

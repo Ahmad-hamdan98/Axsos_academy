@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            border: 1px solid beige;
+            width: 600px;
+            margin-left: 30%;
+            margin-top: 10%;
+        }
+        .cabsa{
+            margin-left: 225px;
+            margin-top: 49px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+<div class="con">
+    <h1>Edit Show </h1>
+
+
+    <form action="/showss/{{zeft.id}}" method="post">
+        {% csrf_token %}
+        Title : <input type="text" name="title1" value="{{zeft.title}}"><br><br>
+        Network: <input type="text" name="net1" value="{{zeft.show}}">
+        Release Date : <input type="date" name="date1" value="{{zeft.date}}"><br><br><br>
+        Descreption : <br>
+         <textarea name="desc1" value="{{zeft.desc}}"  cols="70" rows="5" placeholder="Write Desccription"  ></textarea>
+        <br>
+        <input class="cabsa" type="submit" value="Update" >
+
+    </div>
+
+
+
+</body>
+</html>
