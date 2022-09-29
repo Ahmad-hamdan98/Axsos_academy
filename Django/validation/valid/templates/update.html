@@ -26,14 +26,21 @@
 <div class="con">
     <h1>Edit Show </h1>
 
-
+    {% if messages %}
+    <ul class="messages">    
+    {% for message in messages %}    
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
     <form action="/showss/{{zeft.id}}" method="post">
         {% csrf_token %}
-        Title : <input type="text" name="title1" value="{{zeft.title}}"><br><br>
-        Network: <input type="text" name="net1" value="{{zeft.show}}">
-        Release Date : <input type="date" name="date1" value="{{zeft.date}}"><br><br><br>
+        Title : <input type="text" name="title" value="{{zeft.title}}"><br><br>
+        Network: <input type="text" name="net" value="{{zeft.show}}">
+        Release Date : <input type="date" name="date" value="{{zeft.date}}"><br><br><br>
         Descreption : <br>
-         <textarea name="desc1" value="{{zeft.desc}}"  cols="70" rows="5" placeholder="Write Desccription"  ></textarea>
+         <textarea name="desc" value="{{zeft.desc}}"  cols="70" rows="5" placeholder="Write Desccription"  ></textarea>
         <br>
         <input class="cabsa" type="submit" value="Update" >
 

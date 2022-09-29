@@ -7,7 +7,7 @@
         <title>Document</title>
         <style>
              .con{
-            border: 1px solid beige;
+            border: 3px solid beige;
             width: 600px;
             margin-left: 30%;
             margin-top: 10%;
@@ -23,6 +23,7 @@
         <div class="con">
         <h1>Add a New Show </h1>
 
+             
 
         <form action="/showone" method="post">
             {% csrf_token %}
@@ -34,10 +35,18 @@
             <br>
             <input class="cabsa" type="submit" value="create" >
 
+            
 
 
 
         </form>
+    {% if messages %}
+    <ul class="messages">    
+    {% for message in messages %}    
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+    {% endfor %}
+    </ul>
+    {% endif %}
     </div>
     </body>
     </html>

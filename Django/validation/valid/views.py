@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-
+from django.contrib import messages
 from valid.models import*
 # Create your views here.
 
@@ -19,8 +19,14 @@ def show(request,id):
     }
     return render(request,"readone.html",context)
 def showone(request):
-   
-    Show.objects.create(title=request.POST['title'],show=request.POST['net'],date=request.POST['date'],desc=request.POST['desc'])
+    errors = Show.objects.basic_validator(request.POST)
+        
+    if len(errors) > 0:
+        for key, value in errors.items():
+            messages.error(request, value)
+            return redirect('/create')
+    else:
+        Show.objects.create(title=request.POST['title'],show=request.POST['net'],date=request.POST['date'],desc=request.POST['desc'])
 
     return redirect("/show/"+str(Show.objects.get(title=request.POST['title']).id))
 
@@ -46,15 +52,24 @@ def edit(request,id):
 
 
 def editzeft(request,id):
-    kara=Show.objects.get(id=id)
-    kara.title =request.POST['title1']
-    kara.net =request.POST['net1']
-    kara.date =request.POST['date1']
-    kara.desc=request.POST['desc1']
-    kara.save()
+
+    errors = Show.objects.basic_validator(request.POST)
+        
+    if len(errors) > 0:
+        for key, value in errors.items():
+            messages.error(request, value)
+            return redirect('/goedit/'+id)
+    else:
+        kara=Show.objects.get(id=id)
+        kara.title =request.POST['title']
+        kara.net =request.POST['net']
+        kara.date =request.POST['date']
+        kara.desc=request.POST['desc']
+        kara.save()
+    
     context={
         'last_objec':Show.objects.get(id=id)
-    }
+                    }
     return render(request,"readone.html",context)
 
 
