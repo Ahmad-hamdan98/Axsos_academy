@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            margin: 20%;
+        }
+        .v{
+            background-color: blue;
+            color: aliceblue;
+            margin-left: 70%;
+        }
+        .t{
+            background-color: green;
+            color: aliceblue;
+            margin-left: 60%;
+        }
+        .comint{
+            margin-left: 20%;
+        }
+        hr{
+            width: 600px;
+        }
+        h4{
+            margin-left: 30px;
+        }
+        h5{
+            margin-left: 40px;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+    Write a message <br>
+    <form action="/wall/message" method="post"> 
+        {% csrf_token %}
+    <textarea name="post" id="" cols="120" rows="5"></textarea><br>
+    <button type="submit" class="v" > Post a Message </button>
+
+    </form>
+    </div>
+    <div class="comint">
+    {% for i in allmessages %}
+
+        <h3>{{i.user.first_name}} {{i.user.last_name}} {{i.user.created_at}}</h3>
+
+        <p>{{i.Messagee}}</p>
+        <p>Comints:</p>
+        
+        {% for j in allcomints %}
+        {% if i.id == j.message.id  %}
+        <h4>{{j.user.first_name}} {{j.user.last_name}} {{j.user.created_at}}</h4>
+        <h5>{{j.coment}}</h5>
+        {% endif %}
+        {% endfor %}
+        <form action="/wall/comint" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="hide" value="{{i.id}}">
+            <textarea name="com" id="" cols="120" rows="5"></textarea><br>
+            <button type="submit" class="t" > Post a comint </button>
+            
+        </form>
+        <hr>
+    {% endfor %}
+    </div>
+
+</body>
+</html>

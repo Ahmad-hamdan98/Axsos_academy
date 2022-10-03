@@ -1,0 +1,34 @@
+Microsoft Windows [Version 10.0.22000.978]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\HP\Documents\Axsos_academy\Django\django_intro>C:\Users\HP\Documents\Axsos_academy\Django\djangoPy3Env\Scripts^
+'C:\Users\HP\Documents\Axsos_academy\Django\djangoPy3Env\Scripts' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\HP\Documents\Axsos_academy\Django\django_intro>call "C:\Users\HP\Documents\Axsos_academy\Django\djangoPy3Env\Scripts\activate"
+(djangoPy3Env) C:\Users\HP\Documents\Axsos_academy\Django\django_intro>django-admin startproject timedisplay
+
+(djangoPy3Env) C:\Users\HP\Documents\Axsos_academy\Django\django_intro>cd timedisplay
+
+(djangoPy3Env) C:\Users\HP\Documents\Axsos_academy\Django\django_intro\timedisplay>python manage.py startapp time
+CommandError: 'time' conflicts with the name of an existing Python module and cannot be used as an app name. Please try another name.
+
+(djangoPy3Env) C:\Users\HP\Documents\Axsos_academy\Django\django_intro\timedisplay>
+
+
+django_intro> cd your_project_name_here
+your_project_name_here> python manage.py runserver
+
+your_project_name_here> python manage.py startapp your_app_name_here
+
+ 
+        {% if messages %}
+        <ul class="messages">    
+        {% for message in messages %}    
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+        {% endfor %}
+        </ul>
+        {% endif %}
+
+
+call "C:\Users\HP\Documents\Axsos_academy\Django\djangoPy3Env\Scripts\activate"

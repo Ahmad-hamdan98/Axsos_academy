@@ -5,6 +5,6 @@ urlpatterns = [
     path('dojo',views.dojo),
     path('ninja',views.ninja),
     path('delete',views.delete),
-        path('deleteninja',views.deleteninja)
+    path('deleteninja',views.deleteninja)
 
 ]

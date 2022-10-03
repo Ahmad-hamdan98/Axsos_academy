@@ -1,3 +1,4 @@
+from tkinter import CASCADE
 from django.db import models
 import re
 # Create your models here.
@@ -31,4 +32,20 @@ class User(models.Model):
     email=models.CharField(max_length=255)
     password=models.CharField(max_length=255)
     confirm_PW=models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     objects = BlogManager()
+
+
+class Messages(models.Model):
+    Message=models.TextField()
+    user=models.ForeignKey(User,related_name='usermasege' , on_delete=CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class Coments(models.Model):
+    coment=models.TextField()
+    user=models.ForeignKey(User,related_name='usercoment' , on_delete=CASCADE)
+    message=models.ForeignKey(Messages,related_name='messagecoment' , on_delete=CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

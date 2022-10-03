@@ -6,5 +6,7 @@ urlpatterns = [
     path('login',views.login),
     path('success',views.success),
     path('logout/<id>',views.logout),
+    path('logout/<id>',views.logout),
 
+    path('wall',include('wall.urls'))
 ]

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contaner">
+        <div class="Dojo">
+            <form action="/dojo" method="post">
+                {% csrf_token %}
+                <h1>Add Dojo</h1>
+                Name : <input type="text" name="name" >
+                <br><br>
+                City _: <input type="text" name="city" >
+                <br><br>
+                State : <input type="text" name="state" >
+                <br><br>
+                <button name="dadd" >Add</button>
+            </form>
+        </div>
+        <div class="Ninja">
+            <form action="/ninja" method="post">
+                {% csrf_token %}
+                <h1>Add Niinja</h1>
+                First Name : <input type="text" name="firstname" >
+                <br><br>
+                Last Name : <input type="text" name="lastname" >
+                <br><br>
+                Dojo: <select name="dojo"> 
+                    {% for i in alldojo %}
+
+                    <option value="{{i.id}}">{{i.name}}</option>
+                    {%endfor%}
+                </select>
+                <br><br>
+                <button name="nadd" >Add</button>
+            </form>
+        </div>
+        
+
+    </div>
+    <hr>
+    <div class="result">
+        <h1>All Dojos :-</h1>
+    {%for i in alldojo%}
+       <h2>{{i.name}} from {{i.city}}</h2> 
+      
+    {%for j in i.ninjas.all %}
+        <ul>
+        <li> {{j.firstname}}  {{j.lastname}}</li>
+        
+        <form action="/deleteninja" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="delete" value="{{j.id}}">
+           <button name="del">Delete Ninja</button>
+            </form>
+        
+        </ul>
+       {%endfor%}
+       <form action="/delete" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="delete" value="{{i.id}}">
+       <button name="deletes" class="del">Delete Dojo With ninja</button>
+        </form>
+       
+       {%endfor%}
+
+    </div>
+</body>
+</html>

@@ -53,9 +53,11 @@ def login(request):
     user=User.objects.filter(email=request.POST['email1'])
     if user :
         logged_user=user[0]
+        request.session['user']=User.objects.filter(email=request.POST['email1'])
+        # to get user by email ...
         if bcrypt.checkpw(request.POST['pass1'].encode(),logged_user.password.encode()):
             request.session['userid']=logged_user.id
-            return redirect("/success")
+            return redirect("/wall")
         else:
             
             return render(request,"massege.html")
