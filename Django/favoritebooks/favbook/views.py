@@ -65,6 +65,7 @@ def books(request):
     context={
         'user':User.objects.get(id= request.session['userid']),
         'books':Book.objects.all()
+        # 'cd':
     }
     return render(request,"books.html",context)
 
