@@ -14,7 +14,7 @@ public class Test {
 //		
 //		gor.eatBananas();
 //		gor.eatBananas();
-//		gor.climb();
+		gor.climb();
 //		
 		
 		bat.eatHumans();

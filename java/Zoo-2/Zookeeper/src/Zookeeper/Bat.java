@@ -1,15 +1,18 @@
 package Zookeeper;
 
 public class Bat extends Mammal {
-	public int getEnergyLevel() {
-		return energyLevel;
-	}
+//	public int getEnergyLevel() {
+//		return energyLevel;
+//	}
 
-
-	public void setEnergyLevel(int energyLevel) {
-		this.energyLevel = energyLevel;
+	public  Bat(){
+		this.setEnergyLevel(300);
 	}
-	private int energyLevel=300;
+	
+//	public void setEnergyLevel(int energyLevel) {
+//		this.energyLevel = energyLevel;
+//	}
+//	private int energyLevel=300;
 
 	public void fly() {
 		this.setEnergyLevel(this.getEnergyLevel());
