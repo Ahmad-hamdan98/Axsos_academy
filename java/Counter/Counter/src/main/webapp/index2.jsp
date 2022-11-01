@@ -15,6 +15,6 @@ margin-top:400px;
 <title>Insert title here</title>
 </head>
 <body>
-<h1>You have visted <a href="/">HTTp//Your_server</a> ${counte} Times</h1>
+<h1>You have visited <a href="/">HTTp//Your_server</a> ${counte} Times</h1>
 </body>
 </html>

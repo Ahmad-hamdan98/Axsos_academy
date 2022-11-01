@@ -19,16 +19,20 @@ public class CounterApplication {
 	}
 	 @RequestMapping("/")
 	 public String index(HttpSession session) {
-	        session.setAttribute("count", 0);
-	        
+		
+		 if ( session.getAttribute("count")==null) {
+			 session.setAttribute("count", 1);}
+			 else {
+	        Integer x= (Integer)session.getAttribute("count");
+			  x++;
+			 session.setAttribute("count", x);
+			 }
 			return "index.jsp";
 		}
 	 @RequestMapping("/count")
 	 public String index1(HttpSession session, Model model) {
-		 Integer x= (Integer)session.getAttribute("count");
-		  x++;
-		 session.setAttribute("count", x);
-		 model.addAttribute("counte" ,session.getAttribute("count") );
+		
+		 model.addAttribute("counte" , session.getAttribute("count") );
 			return "index2.jsp";
 		}
 
