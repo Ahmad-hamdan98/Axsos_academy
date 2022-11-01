@@ -30,7 +30,7 @@ Also, <c:out value="${mass}"></c:out>
 </p>
 </div>
 
-
+<h2><a href="/">Go back</a></h2>
 
 </body>
 </html>
