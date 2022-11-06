@@ -13,7 +13,9 @@
 <style >
 table{
 
-border: 2px ,solid ,black;}
+border: 2px ,solid ,black;
+text-align: center;
+}
 
 </style>
 </head>
@@ -26,6 +28,7 @@ border: 2px ,solid ,black;}
             <th>Name</th>
             <th>Amount</th>
             <th>vender</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -33,8 +36,9 @@ border: 2px ,solid ,black;}
     	<tr>
         <td> <c:out value="${travel.id}"></c:out></td>
         <td><c:out value="${travel.name}"></c:out> </td>
-        <td><c:out value="${travel.amount}"></c:out></td>
+        <td>$<c:out value="${travel.amount}"></c:out></td>
         <td><c:out value="${travel.vender}"></c:out></td>
+        <td><a href="/edit/${travel.id}"> Edit</a></td>
         </tr>
     </c:forEach>
     </tbody>

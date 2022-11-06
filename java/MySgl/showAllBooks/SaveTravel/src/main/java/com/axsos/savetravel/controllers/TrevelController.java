@@ -9,13 +9,17 @@ import javax.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 //import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.axsos.savetravel.models.Travel;
 import com.axsos.savetravel.services.Trevelservices;
+//import com.example.demo.models.Travel;
 
 
 
@@ -50,15 +54,38 @@ private final Trevelservices travelService;
 	    public String create(@Valid @ModelAttribute("travel") Travel travel, BindingResult result,Model model) {
 	    	  if (result.hasErrors()) {
 	    		  List<Travel> travel1 =travelService.allTravel();
-	  	        model.addAttribute("travel1", travel1);
+	  	        	model.addAttribute("travel1", travel1);
 	              return "index.jsp";
 	          } else {
 	              travelService.createTravel(travel);
 	              return "redirect:/";
 	          }
+	    	  
+	    	    
+	    	  
 	    	
 	    }
-	    
+	    @GetMapping("/edit/{id}")
+	    public String create1( @ModelAttribute("edit") Travel edit, @PathVariable("id") Long id,Model model) {
+	    	
+	    	
+	    	Travel travel7 = travelService.findTravel1(id);
+	    	model.addAttribute("travel", travel7);
+	    	System.out.println(travel7);
+	    	return "edit.jsp";
+	    }
+	    @PutMapping("/update/{id}")
+	    public String create3(@Valid @ModelAttribute("edit") Travel edit, BindingResult result,@PathVariable("id") Long id,Model model) {
+	    	if (result.hasErrors()) {
+	    		 Travel travel7 = travelService.findTravel1(id);
+		  	     model.addAttribute("travel", travel7);
+	              return "edit.jsp";
+	          } else {
+	        	 
+	        	  travelService.updateTravel2(edit);
+	        	  
+	              return "redirect:/";
+	          }
 	    
 //	    @PutMapping("/books/{id}")
 //	    public String update(@Valid @ModelAttribute("travel") Travel travel, BindingResult result) {
@@ -69,7 +96,7 @@ private final Trevelservices travelService;
 //	            return "redirect:/books";
 //	        }
 //	    }
-	}
+	    }}
 
 	
 	

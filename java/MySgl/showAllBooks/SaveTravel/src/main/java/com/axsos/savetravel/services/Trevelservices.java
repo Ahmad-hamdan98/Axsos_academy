@@ -3,13 +3,14 @@ package com.axsos.savetravel.services;
 import java.util.List;
 import java.util.Optional;
 
-import javax.validation.Valid;
+//import javax.validation.Valid;
 
 //...
 import org.springframework.stereotype.Service;
 
 import com.axsos.savetravel.models.Travel;
 import com.axsos.savetravel.repositories.TravelRepositries;
+
 
 @Service
 public class Trevelservices {
@@ -61,26 +62,36 @@ public void deleteTravel(Long id) {
 //	
 //	
 //}
-public Travel updateTravel(Long id, String name, String desc, Integer amount, String vender) {
-	Travel travel = findTravel(id);
-	if(travel.getId() == id) {
-		travel.setName(name);
-		travel.setDescription(desc);
-		travel.setAmount(amount);
-		travel.setVender(vender);
-		return createTravel(travel);
-	}else {
-		return null;
-	}
-}
-public Travel findTravel(Long id) {
+//public Travel updateTravel(Long id, String name, String desc, Integer amount, String vender) {
+//	Travel travel = findTravel1(id);
+//	if(travel.getId() == id) {
+//		travel.setName(name);
+//		travel.setDescription(desc);
+//		travel.setAmount(amount);
+//		travel.setVender(vender);
+//		return createTravel(travel);
+//	}else {
+//		return null;
+//	}
+//}
+
+//public Travel updateTravel(Long id, String name, String desc, String vender, Integer amount) {
+//	Travel travel = findTravel(id);
+//	if(travel.getId() == id) {
+//		travel.setName(name);
+//		travel.setDescription(desc);
+//		travel.setVender(vender);
+//		travel.setAmount(amount);
+//		return createTravel(travel);
+//	}else {
+//		return null;
+//	}
+//}
+public Travel updateTravel2(Travel travel) {
 	// TODO Auto-generated method stub
-	return null;
+	 return travelRepository.save(travel);
 }
-public void updateTravel(@Valid Travel travel) {
-	// TODO Auto-generated method stub
-	
-}
+
 
 
 }
