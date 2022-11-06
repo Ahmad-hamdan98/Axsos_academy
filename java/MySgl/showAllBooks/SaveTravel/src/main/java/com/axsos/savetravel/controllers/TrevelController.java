@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -60,11 +61,8 @@ private final Trevelservices travelService;
 	              travelService.createTravel(travel);
 	              return "redirect:/";
 	          }
-	    	  
-	    	    
-	    	  
-	    	
 	    }
+	    
 	    @GetMapping("/edit/{id}")
 	    public String create1( @ModelAttribute("edit") Travel edit, @PathVariable("id") Long id,Model model) {
 	    	
@@ -86,7 +84,22 @@ private final Trevelservices travelService;
 	        	  
 	              return "redirect:/";
 	          }
+	    	
+	    }
+	    @DeleteMapping("/delete/{id}")
+	    public String delet(@PathVariable("id") Long id ) {
+	    	travelService.deleteTravel(id);
+	    	
+	    	return "redirect:/";
+	    }
 	    
+	    
+	    @RequestMapping("/show/{id}")
+	    public String Shoetravel(Model model ,@PathVariable("id" ) Long id) {
+	    	Travel tww = travelService.findTravel1(id);
+	    	model.addAttribute("shit",tww);
+	    	return "showtravel.jsp";
+	    }
 //	    @PutMapping("/books/{id}")
 //	    public String update(@Valid @ModelAttribute("travel") Travel travel, BindingResult result) {
 //	        if (result.hasErrors()) {
@@ -96,7 +109,7 @@ private final Trevelservices travelService;
 //	            return "redirect:/books";
 //	        }
 //	    }
-	    }}
+	    }
 
 	
 	

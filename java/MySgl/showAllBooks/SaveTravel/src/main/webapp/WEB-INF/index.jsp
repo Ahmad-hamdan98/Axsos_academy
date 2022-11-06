@@ -29,16 +29,23 @@ text-align: center;
             <th>Amount</th>
             <th>vender</th>
             <th>Actions</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
         <c:forEach var="travel" items="${travel1}">
     	<tr>
         <td> <c:out value="${travel.id}"></c:out></td>
-        <td><c:out value="${travel.name}"></c:out> </td>
+        <td><a href="/show/${travel.id}"><c:out value="${travel.name}"></c:out></a> </td>
         <td>$<c:out value="${travel.amount}"></c:out></td>
         <td><c:out value="${travel.vender}"></c:out></td>
         <td><a href="/edit/${travel.id}"> Edit</a></td>
+      
+        <td>
+        <form action="/delete/${travel.id}" method="post">
+    	<input type="hidden" name="_method" value="delete">
+    	<input type="submit" value="Delete">
+</form></td>
         </tr>
     </c:forEach>
     </tbody>
