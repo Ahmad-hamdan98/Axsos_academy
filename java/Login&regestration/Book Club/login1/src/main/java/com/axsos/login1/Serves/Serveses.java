@@ -115,14 +115,20 @@ public Book updatebook(Book b) {
 public List<Book> allbook() {
     return bookRepo.findAll();
 }
-
+public User updatuser(User b) {
+	return userRepo.save(b);
+}
 
 public void delete(Long id) {
 	// TODO Auto-generated method stub
 	bookRepo.deleteById(id);
 }
-
-
+//public List<Book> isnotpqrow(boolean bal){
+//	return  bookRepo.findByParow(false);
+//}
+//public List<Book> findbyUserNotContain(User user){
+//	return bookRepo.findByuserprowNotContains(user.getId());
+//}
  
 
 //public Servesies(ProductsRepo prodect, CategoriesRepo catagory) {

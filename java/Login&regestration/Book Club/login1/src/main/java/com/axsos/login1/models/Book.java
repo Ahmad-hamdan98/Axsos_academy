@@ -22,24 +22,49 @@ public class Book {
 	private String title;
 	private String authorname;
 	private String mythouths;
+	private boolean parow;
+	
+	public boolean isParow() {
+		return parow;
+	}
+	public void setParow(boolean parow) {
+		this.parow = parow;
+	}
 	@Column(updatable=false)
 	private Date createdAt;
 	private Date updatedAt;
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="user_id")
 	private User user;
-	public Book(){
-		
-	}
-	public Book(Long id, String title, String authorname, String mythouths, Date createdAt, Date updatedAt) {
-		
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="userProw_id")
+	private User userprow;
+	
+	public Book(Long id, String title, String authorname, String mythouths, boolean parow, Date createdAt,
+			Date updatedAt, User user) {
+		super();
 		this.id = id;
 		this.title = title;
 		this.authorname = authorname;
 		this.mythouths = mythouths;
+		this.parow = parow;
 		this.createdAt = createdAt;
 		this.updatedAt = updatedAt;
+		this.user = user;
 	}
+	
+	
+	public User getUserprow() {
+		return userprow;
+	}
+	public void setUserprow(User userprow) {
+		this.userprow = userprow;
+	}
+	public Book(){
+		
+	}
+	
 	public Long getId() {
 		return id;
 	}

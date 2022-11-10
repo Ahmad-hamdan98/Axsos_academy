@@ -34,7 +34,6 @@
 					<form:label path="authorname">author</form:label>
 					<form:input class="authorname" path="authorname"/>
 					<form:errors path="authorname" class="red"/>
-					
 				</td>
 			</tr>
 			<tr>

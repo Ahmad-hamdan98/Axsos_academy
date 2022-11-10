@@ -46,9 +46,12 @@ public class Controllers {
         }
     }
 			    @GetMapping("/")
-			    public String index(Model model) {
+			    public String index(Model model,HttpSession session) {
 			        model.addAttribute("newUser", new User());
 			        model.addAttribute("newLogin", new Login());
+//			        User user =userServ.findUserById((Long)session.getAttribute("user_id"));
+//			    	model.addAttribute("allbook",userServ.findbyUserNotContain(user));
+//			    	System.out.println(userServ.findbyUserNotContain(user));
 			        return "index.jsp";
 			    }
 			    
@@ -139,6 +142,45 @@ public class Controllers {
 //			    	model.addAttribute("user",user);
 			    	return "redirect:/home";
 			    }
+			   //--------------------------------------------------------------------------------- 
+			    @GetMapping("/market")
+			    public String bookmarket(Model model, HttpSession session) {
+			    	User user =userServ.findUserById((Long)session.getAttribute("user_id"));
+			    	model.addAttribute("allbook",userServ.allbook());
+			    	model.addAttribute("user",user);
+			    	
+			    	return "market.jsp";
+			    }
+			    
+			    //=------------------------=====================================------------------=
+			    
+			    @RequestMapping("/borrow/{id}")
+			    public String bookborrw(Model model, HttpSession session,@PathVariable("id")Long id) {
+			    	Book b=userServ.findBookById(id);
+			    	b.setParow(true);
+			    	User user =userServ.findUserById((Long)session.getAttribute("user_id"));
+			    	b.setUserprow(user);
+			    	
+			    	userServ.updatebook(b);
+			    	model.addAttribute("allbook",userServ.allbook());
+			    	
+			    	
+			    	return "redirect:/market";
+			    }
+			    @RequestMapping("/return/{id}")
+			    public String bookreturn(Model model, HttpSession session,@PathVariable("id")Long id) {
+			    	Book b=userServ.findBookById(id);
+			    	b.setParow(false);
+			    	User user =userServ.findUserById((Long)session.getAttribute("user_id"));
+			    	b.setUserprow(null);
+			    	
+			    	userServ.updatebook(b);
+			    	model.addAttribute("allbook",userServ.allbook());
+			    	model.addAttribute("user",user);
+			    	
+			    	
+			    	return "redirect:/market";
+			    }
 			    
 			    
 			    
@@ -146,13 +188,16 @@ public class Controllers {
 			    
 			    
 			    
-			    
-			    
-			    
-			    
-			// .. don't forget to inlcude all your imports! ..
-		    
 			
+			    
+			    
+			    
+			    
+			    
+			    
+			    
+			    
+			    
 			    
 //			     Add once service is implemented:
 			    

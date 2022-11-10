@@ -25,21 +25,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Table(name="users")
 public class User {
     
-    public User(Long id,
-			@NotEmpty(message = "Username is required!") @Size(min = 3, max = 30, message = "Username must be between 3 and 30 characters") String userName,
-			@NotEmpty(message = "Email is required!") @Email(message = "Please enter a valid email!") String email,
-			@NotEmpty(message = "Password is required!") @Size(min = 8, max = 128, message = "Password must be between 8 and 128 characters") String password,
-			@NotEmpty(message = "Confirm Password is required!") @Size(min = 8, max = 128, message = "Confirm Password must be between 8 and 128 characters") String confirm,
-			Date createdAt, Date updatedAt) {
-		
-		this.id = id;
-		this.userName = userName;
-		this.email = email;
-		this.password = password;
-		this.confirm = confirm;
-		this.createdAt = createdAt;
-		this.updatedAt = updatedAt;
-	}
+
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -51,8 +37,16 @@ public class User {
 
     	@OneToMany(mappedBy="user",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
         private List<Book> book;
+    	
+    	@OneToMany(mappedBy="userprow",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    	private List<Book> bookprow;
    
-    public List<Book> getBook() {
+    	public List<Book> getBookprow() {
+		return bookprow;	}
+		public void setBookprow(List<Book> bookprow) {
+		this.bookprow = bookprow;
+	}
+	public List<Book> getBook() {
 			return book;
 		}
 		public void setBook(List<Book> book) {
@@ -144,7 +138,20 @@ public class User {
 	public void setConfirm(String confirm) {
 		this.confirm = confirm;
 	}
-    
+    public User(Long id,
+			@NotEmpty(message = "Username is required!") @Size(min = 3, max = 30, message = "Username must be between 3 and 30 characters") String userName,
+			@NotEmpty(message = "Email is required!") @Email(message = "Please enter a valid email!") String email,
+			@NotEmpty(message = "Password is required!") @Size(min = 8, max = 128, message = "Password must be between 8 and 128 characters") String password,
+			@NotEmpty(message = "Confirm Password is required!") @Size(min = 8, max = 128, message = "Confirm Password must be between 8 and 128 characters") String confirm,
+			Date createdAt, Date updatedAt) {
+		this.id = id;
+		this.userName = userName;
+		this.email = email;
+		this.password = password;
+		this.confirm = confirm;
+		this.createdAt = createdAt;
+		this.updatedAt = updatedAt;
+	}
    
 }
     

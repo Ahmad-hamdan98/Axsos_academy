@@ -6,6 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.axsos.login1.models.Book;
+import com.axsos.login1.models.User;
 
 @Repository
 public interface bookRepo extends CrudRepository<Book, Long>{
@@ -13,7 +14,10 @@ public interface bookRepo extends CrudRepository<Book, Long>{
 	 // this method retrieves all the books from the database
 	 List<Book> findAll();
 //	 Optional<User> findByEmail(String email);
-
+	 
+//	 List<Book> findByparowNotContains(Long id);
+//	 List<Book> findByParow(boolean bul);
+	 
 	 // this method finds books with descriptions containing the search string
 	 // this method counts how many titles contain a certain string
 	// Long countByTitleContaining(String search);
