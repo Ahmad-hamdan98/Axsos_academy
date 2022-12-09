@@ -82,7 +82,7 @@ const Moor = () => {
         if (e.target.value !== password) {
             setConfermError("conferm must be == password");
         } else if (e.target.value.length < 3) {
-            setConfermError("conferm must be == password");
+            setConfermError("conferm dsfsdgvsdvz");
         } else {
             setConfermError("");
         }}
