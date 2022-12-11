@@ -18,10 +18,10 @@ const Box = () => {
         e.preventDefault();
         setBoxes(boxes => [...boxes, {"color":box,"width":width+"px" ,"height":width+"px"}])
         setHasBeenSubmitted(true);
+        setBox('')
     }
     const deletee = (e)=>{
     
-       
         setBoxes(boxes=>boxes.filter(boxes=> boxes !==e))
     }
 
@@ -37,7 +37,7 @@ const Box = () => {
 
                 <div>
                     <label>Color </label>
-                    <input type="text" onChange={add} />
+                    <input type="text" onChange={add} value={box}/>
 
                 </div>
                 <div>
