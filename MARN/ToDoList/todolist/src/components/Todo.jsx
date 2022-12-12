@@ -11,6 +11,7 @@ const Todo = () => {
         setIsCompleted(e.target.checked);
         item.isCompleted=e.target.checked
         item.isCompleted? item.style='line-through' :item.style=''
+        setTodos([...todos])
 
     }
     const add = (e) => {
