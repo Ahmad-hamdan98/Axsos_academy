@@ -1,12 +1,14 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import ProductList from '../components/ProductList';
 
-const Main = () => {
+const Main = (props) => {
 const [title ,setTitle] = useState('')
 const [price, setPrice] = useState("");
 const [description, setDescription] = useState("");
 const [products ,setProducts]= useState("")
+const [loded ,setLoded]=useState(false)
 // useEffect(() => {
 // axios.get('http://localhost:8000/api/users/' + id)
 // .then(res => {
@@ -17,10 +19,14 @@ const [products ,setProducts]= useState("")
 
 useEffect(()=>{
     axios.get("http://localhost:8000/api/users")
-        .then(res=>setProducts(res.data))       
-}, []);
+        .then(res=>{setProducts(res.data);setLoded(true);})       
+},);
 
+const removeFromDom = personId => {
+    setProducts(products.filter(person => person._id != personId));
+}
 const updatePerson = e => {
+    e.preventDefault()
     axios.post('http://localhost:8000/api/users/new', {
         title,
         price,
@@ -53,7 +59,8 @@ const updatePerson = e => {
                 </p>
                 <input type="submit" />
             </form>
-            {products}
+            <br></br>
+           { loded && < ProductList people={products} removeFromDom={removeFromDom}/>}
         </div>
     )
 }
