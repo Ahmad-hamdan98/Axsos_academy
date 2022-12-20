@@ -1,19 +1,20 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from '@reach/router'
+import Delete from './Delete'
 const ProductList = (props) => {
 
     // const { removeFromDom } = props;
 
 
-    const deletePerson = (personId) => {
+    // const deletePerson = (personId) => {
 
-        axios.delete('http://localhost:8000/api/users/delete/' + personId)
-            .then(res => {
-                // removeFromDom(personId)
-            })
-            .catch(err => console.error(err));
-    }
+    //     axios.delete('http://localhost:8000/api/users/delete/' + personId)
+    //         .then(res => {
+    //             // removeFromDom(personId)
+    //         })
+    //         .catch(err => console.error(err));
+    // }
     return (
         <div>
             {props.people.map((person, i) =>
@@ -22,9 +23,8 @@ const ProductList = (props) => {
                     <Link style={{ color: 'red' }} to={"/" + person._id + "/edit"}>
                         Edit
                     </Link>
-                    <button onClick={(e) => { deletePerson(person._id) }}>
-                        Delete
-                    </button>
+                    <Delete  personId={person._id} successCallback={()=>props.deletePerson(person._id)}/>
+                     
                     <br></br>
 
                 </div>
