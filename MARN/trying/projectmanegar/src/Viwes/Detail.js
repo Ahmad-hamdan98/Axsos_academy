@@ -30,9 +30,10 @@ const Detail = (props) => {
     const updatePerson = (e) => {
 
         axios.put('http://localhost:8000/api/users/update/' + props.id,{'like':e+1} )
-            .then(res => console.log(res),
-            console.log(likes)
+            .then(res =>{ 
+            setPerson({...person,like:e+1})}
 
+            
             );
 
     }
